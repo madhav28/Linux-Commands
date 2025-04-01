@@ -29,12 +29,20 @@ ls -lh # Human-readable file sizes (KB, MB, GB)
 ```bash
 pwd
 ```
-4. Change directory.
-cd
-Change to a specific directory:
-cd /path/to/directory
-Change to parent directory
-cd ..
+## 4. Change directory
+```bash
+cd                 # Change to home directory
+
+cd /path/to/directory    # Change to a specific directory
+
+cd ..              # Change to parent directory
+
+cd -               # Change to previous directory
+
+cd ~               # Change to home directory (same as just 'cd')
+
+cd ../..           # Move up two directory levels
+```
 5. Create a file.
 touch afile.txt
 Create more than 1 file
