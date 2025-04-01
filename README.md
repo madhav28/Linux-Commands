@@ -3,14 +3,24 @@
 ```bash
 ssh username@servername
 ```
-2. List all the files.
+## 2. List all the files
+```bash
 ls
-To view as a list.
-ls -l
-To view hidden file.
-ls -al
-To view files sorted by time.
-ls -lt
+
+ls -l # Long format listing with permissions, owner, size, etc.
+
+ls -a # Show all files including hidden ones (starting with .)
+
+ls -la # Long format including hidden files
+
+ls -lt # Sort by modification time (newest first)
+
+ls -ltr  # Sort by modification time (newest LAST)
+
+ls -lS # Sort by file size (largest first)
+
+ls -lh # Human-readable file sizes (KB, MB, GB)
+```
 3. Print working directory.
 pwd
 4. Change directory.
