@@ -152,24 +152,41 @@ grep -i "hello" file.txt     # Case-insensitive search
 grep -A 3 "match" file.txt   # Show 3 lines after match
 grep -B 2 "match" file.txt   # Show 2 lines before match
 ```
-10. Don't want anyone to see what is in the file.
-shred file.txt
-11. Make a new directory
+## 10. Securely delete files
+```bash
+shred file.txt          # Overwrite file to hide contents (default 3 passes)
+shred -u file.txt       # Overwrite AND delete file after shredding
+shred -v file.txt       # Verbose mode (show progress)
+```
+## 11. Make a new directory
+```bash
 mkdir newdirectory
-12. Copy and paste a file
-cp '/path/to/sourcefile.txt' '/path/to/destinationfile.txt'
-Move a file
-mv '/path/to/sourcefile.txt' '/path/to/destinationfile.txt'
-13. Remove a file
-rm '/path/to/file.txt'
-14. Remove a directory
-rmdir '/path/to/directory'
-Fails if the directory is not empty then
-rm -r '/path/to/directory'
-15. Create a soft link to a file.
-ln -s 'file.txt' 'link.txt'
-16. Clear the terminal
+```
+## 12. Copy and paste a file
+```bash
+cp /path/to/sourcefile /path/to/destination
+```
+## 13. Move a file
+```bash
+mv '/path/to/sourcefile.txt /path/to/destinationfile.txt
+```
+## 14. Remove a file
+```bash
+rm '/path/to/file'
+```
+## 15. Remove a directory
+```bash
+rm -r directory/            # Delete directory and ALL contents inside
+rm -rf directory/           # Delete WITHOUT confirmation prompts
+```
+## 16. Create a soft link to a file
+```bash
+ln -s file.txt link.txt     # Create link to file in current directory
+```
+## 17. Clear the terminal
+```bash
 clear
+```
 17. Display the username
 whoami
 18. Add a new user
