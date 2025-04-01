@@ -112,6 +112,7 @@ vim +300 config.conf            # Open file and jump to line 300
 vim -O file1.txt file2.txt      # Open files in vertical split view
 sudo vim /etc/nginx/nginx.conf  # Edit system files (requires sudo)
 
+# Essential Vim Commands:
 i          # Enter Insert mode (start typing)
 Esc        # Return to Normal mode (stop typing)
 :w         # Save file ("write")
@@ -121,8 +122,36 @@ Esc        # Return to Normal mode (stop typing)
 :x         # Save only if changes were made, then quit
 :help      # Open Vim's built-in help
 ```
-9. See what is in the file.
-cat file.txt
+## 9. View file contents
+### Basic Viewing
+```bash
+cat file.txt             # Display entire file contents
+cat -n file.txt          # Show with line numbers
+cat file1.txt file2.txt  # Concatenate multiple files
+```
+### Partial Viewing
+```bash
+head file.txt           # Show first 10 lines
+head -n 5 file.txt      # Show first 5 lines
+tail file.txt           # Show last 10 lines
+tail -n 5 file.txt      # Show last 5 lines
+tail -f logfile.log     # Follow (live tail) a growing file
+```
+### Advanced Viewing
+```bash
+less file.txt           # Interactive viewer (scroll/search with /pattern)
+more file.txt           # Basic pager (spacebar to advance)
+nl file.txt             # Show with line numbers (alternative to cat -n)
+tac file.txt            # Display in reverse order (cat backwards)
+```
+### Filtered Viewing
+```bash
+grep "pattern" file.txt      # Show only lines containing pattern
+grep -v "exclude" file.txt   # Exclude lines with pattern
+grep -i "hello" file.txt     # Case-insensitive search
+grep -A 3 "match" file.txt   # Show 3 lines after match
+grep -B 2 "match" file.txt   # Show 2 lines before match
+```
 10. Don't want anyone to see what is in the file.
 shred file.txt
 11. Make a new directory
