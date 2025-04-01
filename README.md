@@ -7,23 +7,23 @@ ssh username@servername
 ```bash
 ls
 
-ls -l # Long format listing with permissions, owner, size, etc.
+ls -l         # Long format listing with permissions, owner, size, etc.
 
-ls -a # Show all files including hidden ones (starting with .)
+ls -a         # Show all files including hidden ones (starting with .)
 
-ls -la # Long format including hidden files
+ls -la        # Long format including hidden files
 
-ls -lt # Sort by modification time (newest first)
+ls -lt        # Sort by modification time (newest first)
 
-ls -ltr  # Sort by modification time (newest LAST)
+ls -ltr       # Sort by modification time (newest LAST)
 
-ls -latr    # Include hidden files, long format, newest last  
+ls -latr      # Include hidden files, long format, newest last  
 
-ls -lS # Sort by file size (largest first)
+ls -lS        # Sort by file size (largest first)
 
-ls -lSr  # Sort by file size (smallest FIRST)
+ls -lSr       # Sort by file size (smallest FIRST)
 
-ls -lh # Human-readable file sizes (KB, MB, GB)
+ls -lh        # Human-readable file sizes (KB, MB, GB)
 ```
 ## 3. Print working directory
 ```bash
@@ -31,25 +31,62 @@ pwd
 ```
 ## 4. Change directory
 ```bash
-cd                 # Change to home directory
+cd                       # Change to home directory
 
 cd /path/to/directory    # Change to a specific directory
 
-cd ..              # Change to parent directory
+cd ..                    # Change to parent directory
 
-cd -               # Change to previous directory
+cd -                     # Change to previous directory
 
-cd ~               # Change to home directory (same as just 'cd')
+cd ~                     # Change to home directory (same as just 'cd')
 
-cd ../..           # Move up two directory levels
+cd ../..                 # Move up two directory levels
 ```
-5. Create a file.
-touch afile.txt
-Create more than 1 file
-touch file1.txt file2.txt
-touch file{1..10}.txt
-6. Add short content to a file:
-echo "Hello World!" > newfile.txt
+## 5. Create a file using touch
+```bash
+touch afile.txt                 # Create a single file  
+
+touch file1.txt file2.txt       # Create multiple files  
+
+touch file{1..10}.txt           # Create files with numbered names (file1.txt to file10.txt)  
+
+touch file{a..d}.txt            # Create files with letter ranges (filea.txt to filed.txt)  
+
+touch "file with space.txt"     # Create a file with spaces in the name  
+
+touch .hiddenfile               # Create a hidden file (starts with a dot)  
+
+touch -c non_existent.txt       # Avoid creating file if it doesn't exist (-c flag)  
+
+touch -t 202501011200 file.txt  # Create file with specific timestamp (YYYYMMDDhhmm)  
+
+touch -r reference.txt new.txt  # Use timestamp from reference.txt for new file  
+```
+## 6. Add content to a file
+```bash 
+echo "Hello World!" > newfile.txt                     # Overwrite file (or create new) with content 
+  
+echo "New line" >> newfile.txt                        # Append content to file (preserves existing content)
+ 
+echo -e "Line 1\nLine 2\nLine 3" > multiline.txt      # Multi-line echo (using quotes) 
+
+printf "Name: %s\nAge: %d\n" "Alice" 25 > user.txt    # Using printf (better for formatting)  
+
+ls -l >> log.txt                                      # Append command output to a file  
+
+date > current_time.txt                               # Overwrite file with command output  
+
+cat << EOF > config.txt                               # Add multi-line content with a heredoc  
+Host: example.com  
+Port: 8080  
+Timeout: 30  
+EOF  
+  
+cat << EOF >> config.txt                              # Append multi-line content
+Debug: true  
+EOF
+```
 7. Create a file:
 nano file.txt
 8. Create a file:
