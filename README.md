@@ -77,13 +77,15 @@ ls -l >> log.txt                                      # Append command output to
 
 date > current_time.txt                               # Overwrite file with command output  
 
-cat << EOF > config.txt                               # Add multi-line content with a heredoc  
+# Add multi-line content with a heredoc
+cat << EOF > config.txt                                 
 Host: example.com  
 Port: 8080  
 Timeout: 30  
 EOF  
-  
-cat << EOF >> config.txt                              # Append multi-line content
+
+# Append multi-line content  
+cat << EOF >> config.txt                              
 Debug: true  
 EOF
 ```
