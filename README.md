@@ -89,11 +89,38 @@ cat << EOF >> config.txt
 Debug: true  
 EOF
 ```
-7. Create a file:
-nano file.txt
-8. Create a file:
-vim file.txt
-save by clicking esc and :wq enter
+## 7. Create or edit a file with nano
+```bash
+nano file.txt            # Create/edit file.txt (opens interactive editor)
+nano ~/Documents/note.md # Edit a file in a specific directory
+nano /etc/config.conf    # Edit system files (requires sudo)
+
+# Common Nano Shortcuts (interactive mode):
+^O (Ctrl+O)             # Save ("Write Out")
+^X (Ctrl+X)             # Exit (prompts to save if unsaved)
+^K (Ctrl+K)             # Cut current line
+^U (Ctrl+U)             # Paste
+^W (Ctrl+W)             # Search
+^\ (Ctrl+\)             # Search and replace
+^G (Ctrl+G)             # Open help menu
+^_ (Ctrl+_)             # Go to specific line number
+```
+8. Create or edit a file with vim
+```bash
+vim file.txt                    # Open file.txt (create if it doesn't exist)
+vim +300 config.conf            # Open file and jump to line 300
+vim -O file1.txt file2.txt      # Open files in vertical split view
+sudo vim /etc/nginx/nginx.conf  # Edit system files (requires sudo)
+
+i          # Enter Insert mode (start typing)
+Esc        # Return to Normal mode (stop typing)
+:w         # Save file ("write")
+:q         # Quit (fails if unsaved changes)
+:q!        # Quit WITHOUT saving (force)
+:wq        # Save and quit
+:x         # Save only if changes were made, then quit
+:help      # Open Vim's built-in help
+```
 9. See what is in the file.
 cat file.txt
 10. Don't want anyone to see what is in the file.
