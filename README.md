@@ -17,12 +17,18 @@ ls -lt # Sort by modification time (newest first)
 
 ls -ltr  # Sort by modification time (newest LAST)
 
+ls -latr    # Include hidden files, long format, newest last  
+
 ls -lS # Sort by file size (largest first)
+
+ls -lSr  # Sort by file size (smallest FIRST)
 
 ls -lh # Human-readable file sizes (KB, MB, GB)
 ```
-3. Print working directory.
+## 3. Print working directory
+```bash
 pwd
+```
 4. Change directory.
 cd
 Change to a specific directory:
