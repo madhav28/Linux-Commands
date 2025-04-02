@@ -268,10 +268,13 @@ cat file.txt | sort     # sorts the lines in ascending order
 ```
 ## 33. Find files
 ```bash
-sudo find / -name "file*"
-sudo find . -type f -name ".*"
-sudo find . -type f -empty
-sudo find . perm /a=x
+sudo find / -name "file*"         # Find files named "file*" system-wide
+
+sudo find . -type f -name ".*"    # Find hidden files in current dir
+
+sudo find . -type f -empty        # Find empty files in current dir
+
+sudo find . -perm /a=x            # Find executable files in current dir
 ```
 43. Make a file executable
 chmod +x file.sh
