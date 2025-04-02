@@ -105,7 +105,7 @@ nano /etc/config.conf    # Edit system files (requires sudo)
 ^G (Ctrl+G)             # Open help menu
 ^_ (Ctrl+_)             # Go to specific line number
 ```
-8. Create or edit a file with vim
+## 8. Create or edit a file with vim
 ```bash
 vim file.txt                    # Open file.txt (create if it doesn't exist)
 vim +300 config.conf            # Open file and jump to line 300
@@ -318,8 +318,10 @@ netstat -tulpn   # Show listening TCP/UDP ports with process info (numeric)
 
 ss -tulpn        # Show listening TCP/UDP ports with process info (modern netstat alternative)
 ```
-53. Allow incoming TCP connections on port 80 (HTTP)
+## 41. Allow incoming TCP connections on port 80 (HTTP)
+```bash
 sudo iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+```
 54. Allow incoming traffic on port 80
 sudo ufw allow 80
 55. Status of ufw
