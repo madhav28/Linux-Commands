@@ -379,22 +379,22 @@ kill -9 process_id
 # kill using name
 pkill -f thisisbash
 ```
-## 55. systemctl
+## 54. systemctl
 ```bash
 sudo systemctl start apache2
 sudo systemctl stop apache2
 sudo systemctl restart apache2
 sudo systemctl status apache2
 ```
-## 56. Get history of all the commands
+## 55. Get history of all the commands
 ```bash
 history
 ```
-## 57. Reboot the system
+## 56. Reboot the system
 ```bash
 sudo reboot
 ```
-## 58. Shutdown the system
+## 57. Shutdown the system
 ```bash
 sudo shutdown
 sudo shutdown -h now
