@@ -187,32 +187,53 @@ ln -s file.txt link.txt     # Create link to file in current directory
 ```bash
 clear
 ```
-17. Display the username
+## 17. Display username
+```bash
 whoami
-18. Add a new user
+```
+## 18. Add a new user
+```bash
 useradd madhav
-19. Add user as a admin (low-level utility)
-sudo useradd madhav
-20. Add user as a admin (high-level utility)
-sudo adduser madhav
-21. Switch user
-su austin
-22. Change back to my original user
+
+sudo useradd madhav   # Add user as a admin (low-level utility)
+
+sudo adduser madhav   # Add user as a admin (high-level utility) 
+```
+## 19. Switch user
+```bash
+su madhav
+```
+## 20. Change back to my original user
+```bash
 exit
-23. Change password of a user
-sudo passwd madhav
-24. Change my password
-passwd
-25. Update repository
+```
+## 21. Change password of a user
+```bash
+sudo passwd madhav     # Different user
+
+passwd                 # Change my password
+```
+## 22. Update packages repository
+```bash
 sudo apt update
-26. Install finger
+```
+## 23. Inspect another user
+```bash
+# Install finger
+sudo apt update
 sudo apt install finger
-27. Inspect another user
-finger user
-28. Manual of a particular package
+
+# Inspect user
+finger username
+```
+## 24. Help/Manual for a package
+```bash
 man package
-29. Quick info a about a package
+```
+## 25. Short help/Manual for a package
+```bash
 whatis package
+```
 30. Get one location of a package
 which package
 31. Get all locations of a package
