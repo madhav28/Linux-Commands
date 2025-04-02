@@ -187,11 +187,11 @@ ln -s file.txt link.txt     # Create link to file in current directory
 ```bash
 clear
 ```
-## 17. Display username
+## 18. Display username
 ```bash
 whoami
 ```
-## 18. Add a new user
+## 19. Add a new user
 ```bash
 useradd madhav
 
@@ -199,25 +199,25 @@ sudo useradd madhav   # Add user as a admin (low-level utility)
 
 sudo adduser madhav   # Add user as a admin (high-level utility) 
 ```
-## 19. Switch user
+## 20. Switch user
 ```bash
 su madhav
 ```
-## 20. Change back to my original user
+## 21. Change back to my original user
 ```bash
 exit
 ```
-## 21. Change password of a user
+## 22. Change password of a user
 ```bash
 sudo passwd madhav     # Different user
 
 passwd                 # Change my password
 ```
-## 22. Update packages repository
+## 23. Update packages repository
 ```bash
 sudo apt update
 ```
-## 23. Inspect another user
+## 24. Inspect another user
 ```bash
 # Install finger
 sudo apt update
@@ -226,47 +226,47 @@ sudo apt install finger
 # Inspect user
 finger username
 ```
-## 24. Help/Manual for a package
+## 25. Help/Manual for a package
 ```bash
 man package
 ```
-## 25. Short help/Manual for a package
+## 26. Short help/Manual for a package
 ```bash
 whatis package
 ```
-## 26. Get location of a executable
+## 27. Get location of a executable
 ```bash
 which package       # Get one location
 
 whereis package     # Get all location
 ```
-## 27. Download from internet
+## 28. Download from internet
 ```bash
 wget https://example.com/file.zip
 
 curl -o myfile.zip https://example.com/file.zip
 ```
-## 28. Compress a file
+## 29. Compress a file
 ```bash
 zip archive_name.zip file1 file2 file3
 ```
-## 29. Unzip a file
+## 30. Unzip a file
 ```bash
 unzip archive_name.zip
 ```
-## 30. Compare two files
+## 31. Compare two files
 ```bash
 cmp file1.txt file2.txt
 ```
-## 31. Difference in two files
+## 32. Difference in two files
 ```bash
 diff file1.txt file2.txt
 ```
-## 32. Sort contents of a file
+## 33. Sort contents of a file
 ```bash
 cat file.txt | sort     # sorts the lines in ascending order
 ```
-## 33. Find files
+## 34. Find files
 ```bash
 sudo find / -name "file*"         # Find files named "file*" system-wide
 
@@ -276,31 +276,31 @@ sudo find . -type f -empty        # Find empty files in current dir
 
 sudo find . -perm /a=x            # Find executable files in current dir
 ```
-## 34. Make a file executable
+## 35. Make a file executable
 ```bash
 chmod +x file.sh
 ```
-## 35. Change ownership of a file
+## 36. Change ownership of a file
 ```bash
 chown username file.txt
 ```
-## 36. Get ip address
+## 37. Get ip address
 ```bash
 ifconfig
 
 ip address
 ```
-## 37. Search for a string pattern
+## 38. Search for a string pattern
 ```bash
 ip address | grep "eth0"
 
 ip address | grep "eth0" | awk "{print $2}"
 ```
-## 38. DNS server
+## 39. DNS server
 ```bash
 resolvectl status
 ```
-## 39. Check if internet is up
+## 40. Check if internet is up
 ```bash
 ping google.com                 # Ping Google continuously
 
@@ -310,7 +310,7 @@ ping -c 5 -s 500 google.com     # Ping Google 5 times with 500-byte packets
 
 traceroute google.com           # Trace route to Google
 ```
-## 40. Check the open ports
+## 41. Check the open ports
 ```bash
 netstat          # Show all active network connections and listening ports  
 
@@ -318,43 +318,67 @@ netstat -tulpn   # Show listening TCP/UDP ports with process info (numeric)
 
 ss -tulpn        # Show listening TCP/UDP ports with process info (modern netstat alternative)
 ```
-## 41. Allow incoming TCP connections on port 80 (HTTP)
+## 42. Allow incoming TCP connections on port 80 (HTTP)
 ```bash
 sudo iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 ```
-54. Allow incoming traffic on port 80
+## 43. Allow incoming traffic on port 80
+```bash
 sudo ufw allow 80
-55. Status of ufw
+```
+## 44. Status of ufw
+```bash
 sudo ufw enable
 sudo ufw status
-56. Info about the system
+```
+## 45. Info about the system
+```bash
 uname
+
 uname -a
-57. neofetch
-sudo apt install neofetch
+
 neofetch
-58. View Calendar
+```
+## 46. View calendar
+```bash
 cal
-calculate math
+```
+## 47. Math
+```bash
 echo "4+5+6+7" | bc
-59. Check memory in the system
+```
+## 48. Check memory usage
+```bash
 free
-60. Disk Space
-df
-df -H
-61. Size of a directory
+```
+## 49. Check disk space
+```bash
+df         # Show disk space usage for all mounted filesystems
+df -H      # Show disk space in human-readable format (e.g., KB, MB, GB)
+```
+## 50. Check directory size
+```bash
 du -sh path/to/directory
-61. Check running processes
+```
+## 51. Check running processes
+```bash
 ps
 ps -aux
-62. check top process
+```
+## 52. Top processes
+```bash
 top
 htop
-63. Kill a specific process
-ps -aus | grep thisisbash.sh
+```
+## 53. Kill a specific process
+```bash
+# kill using process_id
+ps -aux | grep thisisbash.sh
 kill -9 process_id
-64. Kill a process using name
+
+# kill using name
 pkill -f thisisbash
+```
 65. systemctl
 sudo systemctl start apache2
 sudo systemctl stop apache2
