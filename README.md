@@ -276,31 +276,48 @@ sudo find . -type f -empty        # Find empty files in current dir
 
 sudo find . -perm /a=x            # Find executable files in current dir
 ```
-43. Make a file executable
+## 34. Make a file executable
+```bash
 chmod +x file.sh
-44. Change ownership of a file
+```
+## 35. Change ownership of a file
+```bash
 chown username file.txt
-45. Get ip address
+```
+## 36. Get ip address
+```bash
 ifconfig
-46. Get ip address
+
 ip address
-47. Search for a string pattern
+```
+## 37. Search for a string pattern
+```bash
 ip address | grep "eth0"
-48. Print using regular expressions
+
 ip address | grep "eth0" | awk "{print $2}"
-49. DNS server
+```
+## 38. DNS server
+```bash
 resolvectl status
-50. Check if internet is up
-ping networkchunks.com
-ping -c 5 networkchunks.com
-ping -c 5 -s 500 networkchunks.com
-Path to a website
-traceroute networkchunk.com
-51. Check the open ports
-netstat
-netstat -tulpn
-52. Check the ports
-ss -tulpn
+```
+## 39. Check if internet is up
+```bash
+ping google.com                 # Ping Google continuously
+
+ping -c 5 google.com            # Ping Google 5 times
+
+ping -c 5 -s 500 google.com     # Ping Google 5 times with 500-byte packets
+
+traceroute google.com           # Trace route to Google
+```
+## 40. Check the open ports
+```bash
+netstat          # Show all active network connections and listening ports  
+
+netstat -tulpn   # Show listening TCP/UDP ports with process info (numeric)  
+
+ss -tulpn        # Show listening TCP/UDP ports with process info (modern netstat alternative)
+```
 53. Allow incoming TCP connections on port 80 (HTTP)
 sudo iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 54. Allow incoming traffic on port 80
