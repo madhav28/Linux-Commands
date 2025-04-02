@@ -234,10 +234,12 @@ man package
 ```bash
 whatis package
 ```
-30. Get one location of a package
-which package
-31. Get all locations of a package
-whereis package
+## 26. Get location of a executable
+```bash
+which package       # Get one location
+
+whereis package     # Get all location
+```
 32. Download from internet
 wget link
 33. get content to a file
