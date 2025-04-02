@@ -240,31 +240,39 @@ which package       # Get one location
 
 whereis package     # Get all location
 ```
-32. Download from internet
-wget link
-33. get content to a file
-curl link > file.txt
-34. Compress a file
-zip file.zip file.txt
-35. unzip a file
-unzip file.zip
-36. Pager utility for viewing a file
-less file.txt
-37. See the beginning of a file
-head file.txt
-38. See the end of a file
-tail file.txt
-39. Compare two files
+## 27. Download from internet
+```bash
+wget https://example.com/file.zip
+
+curl -o myfile.zip https://example.com/file.zip
+```
+## 28. Compress a file
+```bash
+zip archive_name.zip file1 file2 file3
+```
+## 29. Unzip a file
+```bash
+unzip archive_name.zip
+```
+## 30. Compare two files
+```bash
 cmp file1.txt file2.txt
-40. Difference in two files
+```
+## 31. Difference in two files
+```bash
 diff file1.txt file2.txt
-41. Sort contents of a file
-cat file.txt | sort
-42. Find files
+```
+## 32. Sort contents of a file
+```bash
+cat file.txt | sort     # sorts the lines in ascending order
+```
+## 33. Find files
+```bash
 sudo find / -name "file*"
 sudo find . -type f -name ".*"
 sudo find . -type f -empty
 sudo find . perm /a=x
+```
 43. Make a file executable
 chmod +x file.sh
 44. Change ownership of a file
